@@ -1,0 +1,55 @@
+Pentru implementarea temei am realizat cate o functie diferita pentru fiecare operatie cat si functia de creare a taelei hash (de dispersie),si functia hash
+
+1.Construieste
+2.hash
+3.Cauta - responsabila pentru operatia "find"
+4.Introduce - responsabila pentru operatia "put"
+5.Elimina - responsabila pentru operatia "remove"
+6.Afiseaza - responsaibla pentru operatia "print"
+7.CeIP - responsabila pentru operatia "get"
+8.AfiseazaBucket - responsabila pentru operatia "print_bucket"
+
+Functia hash calculeaza restul imaprtirii sumei codurilor ascii la numarul de bucketuri
+
+Functia Cauta verifica daca elementul se gaseste sau nu in tabela
+
+Introducerea elementelor in bucket a fost facuta astfel incat acesta sa fie sortat dupa cheie.
+Pentru aceasta a fost nevoie de tratarea separata a cazurilor precum:
+
+	bucket vid
+	bucket cu 1 element (inainte sau dupa)
+	bucket cu 2 elemente (cele 2 auxiliare raman pe loc)
+		elementul trebuie introdus:
+			inaintea primului
+			intre cele 2
+			dupa cel de-al doilea
+			
+Functia Elimina sterge elementul din tabela avand grija sa restabileasca legaturile
+
+Functia CeIP intoarce IP-ul corespunzator adresei web
+
+Functiile de afisare Afiseaza si AfiseazaBucket
+
+Fisierul text citit a fost impartit in cuvinte in functie de separerea cu " "(spatiu) si acestea au fost salvate intr-u vector.
+Ulterior a fost nevoie sa se elimine caracterele "\n" cat si elementele NULL din vector rezultand un vector ce are pe fiecare pozitie care un element reprezentant fie
+	
+	O comanda:
+		put
+		get
+		remove
+		find
+		print
+		print_bucket
+		
+	Fie o adresa web de forma www.adresa.***
+	
+	Fie un IP de forma nr.nr.nr.nr
+	
+	Fie un indice
+	
+Prelucrarea comenzilor a fost facuta parcurgand vectorul pana la urmatoarea comanda.
+Stiind formatul fiecarei comenzi elementele din vector au fost manipulate in asa fel incat acestea sa mearga ca parametrii catre functiile de prelucrare in functie de fiecare format
+
+De exemplu
+	
+	La intalnirea "put" stiind ca aceasta comanda are 2 parametrii in ordine Key si Value elementele i+1 si i+2 au fost folosite ca parametrii pentru functia de adaugare.
